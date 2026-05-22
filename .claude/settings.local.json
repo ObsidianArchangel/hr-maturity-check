@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\lokod\\\\OneDrive\\\\Desktop\\\\Диплом\\\\hr-maturity-check\\\\src\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName)"
+    ]
+  }
+}
