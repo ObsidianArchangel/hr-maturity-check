@@ -810,7 +810,7 @@ function DiagnosticScreen({ step, state, updateAnswer, updateMetric, onNext, onB
           className="text-xs uppercase tracking-widest text-slate-500 mb-1"
           title="В методике это К1. Оценивает, насколько процесс зафиксирован: есть ли порядок действий, роли и контрольные точки."
         >
-          Описание процесса
+          К1. Регламентация процесса
         </div>
         <div className="text-sm text-slate-400 mb-4">Оцените каждое утверждение по шкале от 1 до 4.</div>
 
@@ -835,7 +835,7 @@ function DiagnosticScreen({ step, state, updateAnswer, updateMetric, onNext, onB
           className="text-xs uppercase tracking-widest text-slate-500 mb-1"
           title="В методике это К2. Оценивает, измеряется ли процесс, есть ли ответственный за показатель и обсуждается ли он регулярно."
         >
-          Управление по данным
+          К2. Управление по данным
         </div>
         <div className="text-sm text-slate-400 mb-6">
           Для каждого показателя выберите, как с ним работают в компании. Если значение известно — введите его,
@@ -1206,15 +1206,20 @@ function ResultScreen({ results, onBack, onPriorities, onReset }) {
 
       <FinancialBlock />
 
-      <div className="flex items-center justify-between mt-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8">
         <Button variant="secondary" onClick={onBack}>
           ← К диагностике
         </Button>
-        <div className="flex gap-3">
-          <Button variant="ghost" onClick={onReset}>
-            Начать заново
-          </Button>
-          <Button onClick={onPriorities}>Приоритеты действий →</Button>
+        <div className="flex flex-col gap-3 sm:items-end">
+          <div className="text-xs text-slate-500 leading-relaxed max-w-xl sm:text-right">
+            На основе профиля зрелости инструмент формирует дорожную карту приоритетных улучшений по горизонтам: месяц, квартал, полгода.
+          </div>
+          <div className="flex gap-3">
+            <Button variant="ghost" onClick={onReset}>
+              Начать заново
+            </Button>
+            <Button onClick={onPriorities}>Открыть дорожную карту →</Button>
+          </div>
         </div>
       </div>
     </div>
